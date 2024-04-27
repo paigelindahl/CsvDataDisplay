@@ -9,10 +9,11 @@ use Spatie\SimpleExcel\SimpleExcelReader;
 class CsvController extends Controller
 {
     /**
-     * Handle csv file
+     * Pass file to Simple Excel Reader to extrapolate data to frontend
      * @param Request $request
+     * @return array
      */
-    public function handleCsv(Request $request)
+    public function handleCsv(Request $request): array
     {
         $request->validate([
             'csvFile' => 'required|file',
@@ -30,7 +31,12 @@ class CsvController extends Controller
         return ['data' => $rowsData];
     }
 
-    public function store($file)
+    /**
+     * Store the csv file in the uploads folder and return path
+     * @param Object $file
+     * @return string
+     */
+    public function store($file): string
     {
         $destinationPath = public_path() . sprintf("/uploads/%s/", Str::random(8));
         $extension = $file->getClientOriginalExtension();
