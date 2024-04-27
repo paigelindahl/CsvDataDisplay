@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>ًApplication</title>
+        @routes
         @vite('resources/css/app.css')
     </head>
     <body>
