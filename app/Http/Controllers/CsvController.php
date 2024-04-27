@@ -27,7 +27,7 @@ class CsvController extends Controller
             $rowsData->push($rowProperties);
         });
 
-        return $rowsData;
+        return ['data' => $rowsData];
     }
 
     public function store($file)
