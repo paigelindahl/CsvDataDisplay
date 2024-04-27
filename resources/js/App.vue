@@ -1,7 +1,15 @@
 <template>
-    <CsvForm @successCsv="showData"></CsvForm>
-    <CsvTable v-show="csvData.length" :data="csvData"></CsvTable>
+    <div class="container">
+        <CsvForm @successCsv="showData"></CsvForm>
+        <CsvTable v-show="csvData.length" :data="csvData"></CsvTable>
+    </div>
 </template>
+
+<style>
+.container {
+    padding: 25px;
+}
+</style>
 
 <script setup>
 import CsvForm from '@/Components/csv/CsvForm.vue';
