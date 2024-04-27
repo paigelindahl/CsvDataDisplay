@@ -11,10 +11,9 @@ import axios from 'axios';
 import { ref } from 'vue';
 
 const csvInput = ref(null);
+const emits = defineEmits(['successCsv']);
 
 const uploadCsv = function(e) {
-    // e.preventDefault();
-
     const csvFile = csvInput.value.files[0];
 
     const data = new FormData();
@@ -26,7 +25,8 @@ const uploadCsv = function(e) {
         }
     })
     .then(res => {
-        console.log('it worked', res);
+        console.log('it worked', res.data);
+        emits('successCsv', res.data);
     }).catch(err => {
         console.log('err', err);
     })
