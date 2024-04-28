@@ -26,7 +26,7 @@
 <style>
 table {
     width: 100%;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 td {

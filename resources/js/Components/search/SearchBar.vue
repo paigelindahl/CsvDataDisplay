@@ -12,6 +12,12 @@
         border-radius: 20px;
         padding: 8px;
         width: 250px;
+        border: 1px solid #e57f42;
+    }
+
+     .search-input:focus-visible {
+
+        outline: 1px solid #e57f42;
     }
 </style>
 

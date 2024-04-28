@@ -1,6 +1,8 @@
 <template>
     <div class="container">
-        <CsvForm @successCsv="showData"></CsvForm>
+        <div class="upload-container">
+            <CsvForm @successCsv="showData"></CsvForm>
+        </div>
 
         <div v-show="revealTable" class="search-container">
             <SearchBar @searching="filterResults"></SearchBar>
@@ -13,12 +15,22 @@
 <style>
 .container {
     padding: 25px;
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.upload-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .search-container {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+    margin-top: 70px;
 }
 </style>
 
