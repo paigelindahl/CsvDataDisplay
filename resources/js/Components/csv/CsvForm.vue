@@ -1,7 +1,7 @@
 <template>
     <h1>Upload CSV File</h1>
     <form enctype="multipart/form-data" @submit.prevent="uploadCsv">
-        <input type="file" name="csvFile" ref="csvInput">
+        <input type="file" name="csvFile" ref="csvInput" >
         <button type="submit">Upload</button>
     </form>
 </template>

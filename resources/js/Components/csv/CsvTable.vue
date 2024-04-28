@@ -37,11 +37,9 @@ td {
 th {
     padding-bottom: 10px;
 }
-
 </style>
 
 <script setup>
-import { computed } from 'vue';
 import { useFindMonthName } from '@/Composables/useFindMonthName.js';
 
 const props = defineProps({
