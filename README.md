@@ -14,6 +14,8 @@ composer install
 
 npm install
 
+php artisan migrate
+
 php artisan serve starts backend
 
 npm run dev starts vite for hotloading changes
