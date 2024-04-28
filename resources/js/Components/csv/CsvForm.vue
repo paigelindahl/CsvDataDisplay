@@ -15,6 +15,7 @@
 h1 {
     size: 40px;
     color: #404040;
+    text-align: center;
 }
 
 .icon {
@@ -30,6 +31,12 @@ h1 {
     border: 1px solid orange;
     padding: 70px;
     border-radius: 20px
+}
+
+@media(max-width: 600px) {
+    .upload-container > div {
+        padding: 20px;
+    }
 }
 
 .upload-container form {

@@ -18,6 +18,7 @@
 table {
     width: 100%;
     margin-top: 30px;
+    min-width: 700px;
 }
 
 td {

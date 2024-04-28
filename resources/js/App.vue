@@ -8,13 +8,15 @@
             <SearchBar @searching="filterResults"></SearchBar>
         </div>
 
+        <div class="table-container">
         <CsvTable v-show="revealTable" :data="filterableData" :keys="keys"></CsvTable>
+        </div>
     </div>
 </template>
 
 <style>
 .container {
-    padding: 25px;
+    padding: 16px;
     max-width: 80rem;
     margin-left: auto;
     margin-right: auto;
@@ -31,6 +33,10 @@
     display: flex;
     justify-content: flex-end;
     margin-top: 70px;
+}
+
+.table-container {
+    overflow-x: scroll;
 }
 </style>
 
