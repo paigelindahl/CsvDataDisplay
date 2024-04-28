@@ -1,7 +1,7 @@
 <template>
 <div>
     <form>
-        <input type="text" v-model="searchInput" class="search-input" placeholder="Search by customer..."/>
+        <input type="text" v-model="searchInput" class="search-input" placeholder="Search..."/>
     </form>
 </div>
 
