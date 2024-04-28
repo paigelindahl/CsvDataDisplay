@@ -30,7 +30,10 @@ td {
 
 th {
     padding-bottom: 10px;
+    padding-top: 10px;
     font-size: 18px;
+    background-color: #5d5d5d;
+    color: white;
 }
 
 .no-results {
