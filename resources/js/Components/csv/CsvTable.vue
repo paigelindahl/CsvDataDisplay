@@ -20,6 +20,7 @@ table {
     margin-top: 30px;
     min-width: 700px;
     table-layout: fixed;
+    border-collapse: collapse;
 }
 
 td {
@@ -36,6 +37,14 @@ th {
     display: flex;
     justify-content: center;
     font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 </style>
 
