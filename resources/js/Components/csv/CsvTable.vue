@@ -18,12 +18,14 @@
 table {
     width: 100%;
     margin-top: 30px;
-    min-width: 700px;
+    min-width: 800px;
+    table-layout: fixed;
+    border-collapse: collapse;
 }
 
 td {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 th {
@@ -35,6 +37,14 @@ th {
     display: flex;
     justify-content: center;
     font-size: 18px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
 }
 </style>
 

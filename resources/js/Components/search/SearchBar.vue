@@ -10,7 +10,10 @@
 <style>
 .search-input {
     border-radius: 20px;
-    padding: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
     width: 250px;
     border: 1px solid #e57f42;
 }

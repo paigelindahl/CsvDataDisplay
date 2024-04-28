@@ -23,12 +23,7 @@ class CsvController extends Controller
 
         $rows = SimpleExcelReader::create($path)->getRows();
 
-        $rowsData = collect();
-        $rows->each(function(array $rowProperties) use ($rowsData) {
-            $rowsData->push($rowProperties);
-        });
-
-        return ['data' => $rowsData];
+        return ['data' => $rows];
     }
 
     /**
