@@ -67,7 +67,9 @@ const getKeys = function() {
 
 const filterResults = function(input) {
     const filteredResults = csvData.value.filter((item) => {
-        return item['Customer'].toLowerCase().includes(input.toLowerCase());
+        // for time im only filtering by the first key name which in the example csv is Customer
+        const key = keys.value[0];
+        return item[key].toLowerCase().includes(input.toLowerCase());
     });
     filterableData.value = filteredResults;
 }
