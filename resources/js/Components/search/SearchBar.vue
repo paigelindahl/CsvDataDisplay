@@ -1,24 +1,23 @@
 <template>
 <div>
     <form>
-        <input type="text" v-model="searchInput" class="search-input" placeholder="Search..."/>
+        <input type="text" v-model="searchInput" class="search-input" placeholder="Search by customer..."/>
     </form>
 </div>
 
 </template>
 
 <style>
-    .search-input {
-        border-radius: 20px;
-        padding: 8px;
-        width: 250px;
-        border: 1px solid #e57f42;
-    }
+.search-input {
+    border-radius: 20px;
+    padding: 8px;
+    width: 250px;
+    border: 1px solid #e57f42;
+}
 
-     .search-input:focus-visible {
-
-        outline: 1px solid #e57f42;
-    }
+.search-input:focus-visible {
+    outline: 1px solid #e57f42;
+}
 </style>
 
 <script setup>
