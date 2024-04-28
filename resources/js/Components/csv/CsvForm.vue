@@ -5,8 +5,8 @@
         </div>
         <h1>Upload your CSV file</h1>
         <form enctype="multipart/form-data" @submit.prevent="uploadCsv">
-            <input type="file" name="csvFile" ref="csvInput" >
-            <button type="submit">Upload</button>
+            <input type="file" name="csvFile" ref="csvInput" @change="allowSubmit" accept=".csv, .xlsx">
+            <button type="submit" :disabled="disabled">Upload</button>
         </form>
     </div>
 </template>
@@ -75,6 +75,11 @@ import UploadIcon from '@/Components/icons/UploadIcon.vue';
 
 const csvInput = ref(null);
 const emits = defineEmits(['successCsv']);
+const disabled = ref(true);
+
+const allowSubmit = function() {
+    disabled.value = false;
+}
 
 const uploadCsv = function(e) {
     const csvFile = csvInput.value.files[0];
@@ -90,7 +95,7 @@ const uploadCsv = function(e) {
     .then(res => {
         emits('successCsv', res.data);
     }).catch(err => {
-        console.log('err', err);
+        console.log('err', err.message);
     })
 }
 </script>
