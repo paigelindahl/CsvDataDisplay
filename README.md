@@ -1,6 +1,22 @@
 ## Setting up the project
 
-php artisan serve
+Requirements:
+PHP ^8.2
+Composer
+Node.js 20+
+npm
+
+Clone the project from here https://github.com/paigelindahl/CsvDataDisplay.git
+
+Cd into the project
+
+composer install
+
+npm install
+
+php artisan serve starts backend
+
+npm run dev starts vite for hotloading changes
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
