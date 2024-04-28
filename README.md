@@ -2,10 +2,10 @@
 This project uses Laravel 11, Vue3 and Vite.
 
 Requirements:
-PHP ^8.2
-Composer
-Node.js 20+
-npm
+- PHP ^8.2
+- Composer
+- Node.js 20+
+- npm
 
 Clone the project from here https://github.com/paigelindahl/CsvDataDisplay.git
 
@@ -24,6 +24,18 @@ php artisan serve (starts backend)
 
 npm run dev (starts vite for hotloading changes)
 
+## Description of Project
+
+This application receives a csv or excel file and displays the data on the page.
+
+If I had more time i would have:
+- done a drag and drop format for the csv input
+- more search / filter options, to save on time I only implemented search by name
+- more validation and error handling, including an error message under the input
+- maybe pagination for if a file is very long
+- written tests
+- more thoughtful design
+- maybe a clear button for the csv input
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
