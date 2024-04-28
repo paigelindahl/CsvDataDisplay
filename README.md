@@ -1,4 +1,5 @@
 ## Setting up the project
+This project uses Laravel 11, Vue3 and Vite.
 
 Requirements:
 PHP ^8.2
@@ -14,11 +15,16 @@ composer install
 
 npm install
 
+env needs an app key
+php artisan key:generate
+
 php artisan migrate
 
-php artisan serve starts backend
+php artisan serve (starts backend)
 
-npm run dev starts vite for hotloading changes
+npm run dev (starts vite for hotloading changes)
+
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
