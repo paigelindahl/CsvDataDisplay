@@ -30,7 +30,7 @@ This application receives a csv or excel file and displays the data on the page.
 
 If I had more time i would have:
 - done a drag and drop format for the csv input
-- more search / filter options, to save on time I only implemented search by name
+- more search / filter options, to save on time I only implemented search by the first key which in the example csv is Customer
 - more validation and error handling, including an error message under the input
 - maybe pagination for if a file is very long
 - written tests
