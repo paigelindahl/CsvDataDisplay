@@ -9,7 +9,7 @@
         </div>
 
         <div class="table-container">
-        <CsvTable v-show="revealTable" :data="filterableData" :keys="keys"></CsvTable>
+            <CsvTable v-show="revealTable" :data="filterableData" :keys="keys"></CsvTable>
         </div>
     </div>
 </template>
