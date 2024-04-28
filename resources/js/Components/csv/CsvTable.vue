@@ -18,14 +18,14 @@
 table {
     width: 100%;
     margin-top: 30px;
-    min-width: 700px;
+    min-width: 800px;
     table-layout: fixed;
     border-collapse: collapse;
 }
 
 td {
     text-align: center;
-    padding: 5px;
+    padding: 10px;
 }
 
 th {
