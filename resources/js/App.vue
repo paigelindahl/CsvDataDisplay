@@ -18,7 +18,7 @@
 .container {
     padding: 16px;
     margin-top: 25px;
-    max-width: 80rem;
+    max-width: 90rem;
     margin-left: auto;
     margin-right: auto;
 }
