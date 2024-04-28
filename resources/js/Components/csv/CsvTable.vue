@@ -2,24 +2,15 @@
     <div>
         <table>
             <tr>
-                <th>Customer</th>
-                <th>Site</th>
-                <th>Year</th>
-                <th>Month</th>
-                <th>Waste Type</th>
-                <th>Estimated quantity (kg)</th>
-                <th>Actual quantity (kg)</th>
+                <th v-for="(key, i) in keys" :key="i">{{ key }}</th>
             </tr>
-            <tr v-for="item in data">
-                <td>{{ item['Customer'] }}</td>
-                <td>{{ item['Site'] }}</td>
-                <td>{{ item['Year'] }}</td>
-                <td>{{ findMonthName(item['Month']) }}</td>
-                <td>{{item['Waste Type'] }}</td>
-                <td>{{ item['Estimated quantity (kg)'] }}</td>
-                <td>{{ item['Actual quantity (kg)'] }}</td>
+            <tr v-for="(item, i) in data" :key="i">
+                <td v-for="key in keys">{{ key === 'Month' ? findMonthName(item[key]) : item[key] }}</td>
             </tr>
         </table>
+        <div v-show="!data.length" class="no-results">
+            <p>No results found</p>
+        </div>
     </div>
 </template>
 
@@ -36,14 +27,23 @@ td {
 
 th {
     padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.no-results {
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
 }
 </style>
 
 <script setup>
 import { useFindMonthName } from '@/Composables/useFindMonthName.js';
+import { ref, onMounted, watch } from 'vue';
 
 const props = defineProps({
     data: Array,
+    keys: Array,
 })
 
 const { findMonthName } = useFindMonthName();

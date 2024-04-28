@@ -81,7 +81,6 @@ const uploadCsv = function(e) {
         }
     })
     .then(res => {
-        console.log('it worked', res.data);
         emits('successCsv', res.data);
     }).catch(err => {
         console.log('err', err);

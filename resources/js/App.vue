@@ -8,7 +8,7 @@
             <SearchBar @searching="filterResults"></SearchBar>
         </div>
 
-        <CsvTable v-show="revealTable" :data="filterableData"></CsvTable>
+        <CsvTable v-show="revealTable" :data="filterableData" :keys="keys"></CsvTable>
     </div>
 </template>
 
@@ -45,18 +45,23 @@ import { ref } from 'vue';
 const csvData = ref([]);
 const filterableData = ref([]);
 const revealTable = ref(false);
+const keys = ref([]);
 
 const showData = function(data) {
     csvData.value = data.data;
     filterableData.value = data.data;
     revealTable.value = true;
+    getKeys();
+}
+
+const getKeys = function() {
+    keys.value = Object.keys(csvData.value[0]);
 }
 
 const filterResults = function(input) {
     const filteredResults = csvData.value.filter((item) => {
         return item['Customer'].toLowerCase().includes(input.toLowerCase());
     });
-
     filterableData.value = filteredResults;
 }
 
